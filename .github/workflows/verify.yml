@@ -1,0 +1,36 @@
+name: Verify Human Index
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify structure
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f HUMAN-INDEX.md
+          test -f INDEX-TEST.md
+          test -f ADOPTION.md
+          test -f GOVERNANCE.md
+          test -f VERSION
+          count="$(find rules -maxdepth 1 -type f -name 'HI-*.md' | wc -l | tr -d ' ')"
+          test "$count" = "20"
+          for n in $(seq -w 1 20); do
+            file="rules/HI-$n.md"
+            test -f "$file"
+            grep -q "^# HI-$n — " "$file"
+          done
+          grep -Eq '^1\.0\.0-draft\.[0-9]+$|^[0-9]+\.[0-9]+\.[0-9]+$' VERSION
+          grep -q 'HI-20' HUMAN-INDEX.md
+          grep -q 'HIT-10' INDEX-TEST.md
+          version="$(cat VERSION)"
+          test -d "versions/v$version"

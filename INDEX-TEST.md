@@ -1,49 +1,33 @@
-# Human Index Pre-Ship Test
+## The Index Test and Compliance Metrics
 
-The Human Index Test is not a score. It is a review that forces a team to state what a feature is doing to, with, or on behalf of a human model before the feature ships. A vague answer is a reason to keep reviewing rather than a box to check.
+A constitution becomes useful when a product team can bring a feature into a room and try to break it against the rules. The Index Test should happen before design lock, before a model capability becomes an API, before an enterprise contract is signed, and again when the business model changes. This follows the spirit of NIST’s continuous risk-management approach, Google DeepMind’s review structures, and Anthropic’s use of public safety commitments as internal forcing functions.
 
-## HIT-01
+### The Index Test
 
-What claim about a person is this feature making, and what evidence would cause the system to change its mind?
+1. **Does this feature help the person see something, or does it begin defining what the person is?** If a description could become an identity, score, permanent trait, or eligibility signal, HI-01, HI-02, HI-05, and HI-06 are in play.
 
-## HIT-02
+2. **Could seeing this prediction change the behavior the system claims merely to predict?** If yes, the team must measure the intervention effect, not merely prediction accuracy.
 
-Could showing this prediction influence the behavior it predicts?
+3. **Would we still be comfortable shipping this if an employer, insurer, school, romantic partner, court, or government agency demanded access tomorrow?** If the answer becomes uncomfortable only after the hypothetical recipient changes, the underlying data product is probably too portable.
 
-## HIT-03
+4. **Is the system using information about vulnerability, grief, loneliness, insecurity, addiction, financial stress, sexuality, family conflict, or fear to increase engagement, revenue, conversion, compliance, or persuasion?** If yes, stop.
 
-Can the person disagree with this interpretation in a way that changes the underlying model?
+5. **Can the person see what the system inferred, where it came from, disagree with it, prevent future use, and verify that the correction propagated?** If not, the system does not yet meet the minimum requirements of contestability.
 
-## HIT-04
+6. **Can the person turn this off, leave, or refuse to share without being punished through degraded social or economic status?** A control that exists only on paper is not control.
 
-Does any old inference survive indefinitely? If so, why?
+7. **Could the company explain this feature publicly, including the worst realistic misuse, without hiding behind the phrase “responsible AI”?** If the truthful explanation sounds grotesque, do not solve the PR problem. Solve the product problem.
 
-## HIT-05
+### Measurable compliance tests
 
-Could this data, API, score, or derivative be useful to an employer, school, insurer, lender, landlord, partner, or government?
+The Human Index should not pretend every principle can be reduced to one KPI. NIST explicitly treats AI risk management as contextual and continuous rather than a simple checklist, while IEEE standards emphasize testable transparency and traceability. Still, at least five classes of measurement are practical.
 
-## HIT-06
+**Prediction Influence Delta.** Randomize eligible users between receiving a behavioral prediction and receiving equivalent factual history without the prediction. Measure the change in the behavior being predicted, controlling where appropriate for baseline intent. Teams should pre-register what magnitude of behavioral shift triggers HI-03 review. A model can be statistically accurate and still fail this test if disclosure materially pushes people toward the predicted outcome.
 
-Are we compressing unrelated parts of a person into a general judgment?
+**Vulnerability–Engagement Coupling Audit.** Define a protected class of vulnerability signals—grief, breakup, financial distress, body insecurity, addiction cues, loneliness, self-worth deterioration, and similar states—and test whether their presence predicts increases in notification intensity, monetization exposure, sales conversion prompts, session-extension tactics, or emotionally provocative recommendations. For prohibited commercial uses, the target is conceptually simple: **zero intentional coupling**.
 
-## HIT-07
+**Inference Contestability Score.** For a sample of consequential user-facing inferences, measure the percentage with provenance, confidence, counterevidence, an accessible dispute mechanism, downstream correction propagation, and a known expiration policy. Then measure median correction-propagation latency. “The user can disagree” is not compliance if the old inference survives in an embedding that continues affecting results.
 
-Could a growth, advertising, pricing, or sales system learn when this person is unusually vulnerable?
+**Purpose and API Exposure Audit.** Inventory every endpoint, warehouse table, event stream, partner feed, enterprise export, and derived feature containing personal-model information. Map each to an allowed purpose and HI rule. Automated contract tests should fail any attempt to expose universal human scores, protected vulnerability categories, nonconsensual psychological profiles, or eligibility-oriented behavioral summaries.
 
-## HIT-08
-
-Can the user stop inference without deleting everything?
-
-## HIT-09
-
-If this person were twelve, should this conclusion still exist when they are thirty?
-
-## HIT-10
-
-If the model is wrong, where is the record of that failure?
-
-## Recording a review
-
-A review should name the feature, product or model surface, owner, date, HI rules implicated, evidence considered, unresolved questions, mitigation, and final disposition. The available dispositions are **ship**, **ship with constraints**, **return for revision**, and **do not ship**. Teams should preserve the written review with the same seriousness they preserve security or privacy decisions.
-
-A failed test does not always imply the same remedy. Sometimes the answer is a narrower permission boundary, shorter retention, explicit provenance, a different metric, or a user-visible correction path. Sometimes the correct answer is that the feature should not exist.
+**Unmodeled-Zone Integrity Test.** Create synthetic users who activate “do not analyze,” “forget this period,” or equivalent controls. Verify through retrieval inspection, embeddings, downstream generation, recommendations, analytics, and model-training pipelines that excluded information no longer influences outputs beyond clearly disclosed legal or technical retention requirements.

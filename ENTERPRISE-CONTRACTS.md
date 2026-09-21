@@ -1,15 +1,3 @@
-## Governance and Contractual Enforcement
-
-The Human Index should not be administered by the same growth meeting that has a quarterly target to beat.
-
-A company adopting it should establish a **Human Agency Review Board** with representation from engineering, product, safety, privacy, security, legal, design, behavioral science, and at least one member whose incentives are structurally independent of product revenue. Google DeepMind’s Responsibility and Safety Council offers a real-world precedent for a standing cross-functional body reviewing high-impact work against published principles, while NIST places governance across the full AI risk lifecycle rather than treating it as a final compliance gate. The board should have genuine escalation and stop-ship authority over HI violations, particularly HI-03, HI-05 through HI-08, HI-13, HI-18, HI-21, and HI-24.
-
-The review structure should then be paired with **independent external audit**. Anthropic’s 2026 Responsible Scaling Policy is useful here because it moves toward recurring public Risk Reports and expert external review under defined circumstances, acknowledging that self-assessment has limits. Human Index adopters should publish an annual Human Agency Report describing material incidents, rejected features, known unresolved risks, metrics from the Index tests, external-audit findings, rule changes, and any exemptions granted.
-
-There should also be a **public Human Index Incident Register**. A violation does not have to mean catastrophe. It might be an inference users could not actually remove, a notification experiment accidentally coupled to grief signals, a partner integration that retained data after expiration, or a sales team proposing an employer product that crossed HI-06. The point is to create institutional memory. Hiding every mistake guarantees future employees will rediscover the same mistake under a different product name.
-
-PAI’s synthetic-media framework offers a useful model for living governance: supporters were asked to contribute real cases so the framework could be pressure-tested and revised as technology evolved. The Human Index should do the same. HI-25 should eventually exist because reality showed us something HI-01 through HI-24 failed to anticipate.
-
 ### Enterprise contract language
 
 The following clauses are illustrative starting points for U.S. counsel, not substitutes for jurisdiction-specific legal review. They are intentionally stricter than “comply with applicable law” because the purpose is to bind customers to the Human Index even where the law has not yet caught up.

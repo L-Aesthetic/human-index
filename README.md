@@ -1,64 +1,57 @@
 # The Human Index
 
-**A doctrine for machines that know people.**
+**A Manifesto and Operating Constitution for AI That Knows People**
 
-The Human Index is a public framework proposed by **Still Cloud** for companies building AI that remembers, models, predicts, persuades, or interprets human beings. It began as a set of constraints for Still Cloud itself and is being published so the same questions can be argued about, tested, forked, and improved outside one product.
+The Human Index is not an index of human beings. It is an index of the limits we place on machines that model human beings. It was proposed by **Still Cloud** as a working constitution for companies building AI that remembers, models, predicts, persuades, or interprets people.
 
-This repository is the change-history and implementation home for the framework. The readable canonical publication is intended to live at [stillcloud.app/human-index](https://www.stillcloud.app/human-index).
+The complete normative draft is [HUMAN-INDEX.md](HUMAN-INDEX.md). The readable canonical publication is intended to live at [stillcloud.app/human-index](https://www.stillcloud.app/human-index).
 
 > **Status:** working draft 1.0.0-draft.1. This is not yet the immutable v1.0.0 release, and there is no Human Index certification program.
 
-## What this is for
+## The 24 rules
 
-The central problem is not only privacy. A sufficiently persistent AI can become persuasive about the person it models. Once a system can connect years of behavior, memories, relationships, preferences, failures, and predictions, its interpretation may begin to influence the person, the institutions around them, or both. The Human Index exists to keep useful personal intelligence from quietly turning into authority over a human life.
+- [HI-01 — THE MAP IS NOT YOU](rules/HI-01.md)
+- [HI-02 — NO PERMANENT YOU](rules/HI-02.md)
+- [HI-03 — NO DESTINY ENGINE](rules/HI-03.md)
+- [HI-04 — THE HUMAN HOLDS THE PEN](rules/HI-04.md)
+- [HI-05 — NO HUMAN NUMBER](rules/HI-05.md)
+- [HI-06 — NO SECOND RÉSUMÉ](rules/HI-06.md)
+- [HI-07 — PRIVATE MEANS USELESS TO THE MARKET](rules/HI-07.md)
+- [HI-08 — NO PAIN LOOPS](rules/HI-08.md)
+- [HI-09 — THE RIGHT TO SAY BULLSHIT](rules/HI-09.md)
+- [HI-10 — THE MACHINE GETS A RECORD TOO](rules/HI-10.md)
+- [HI-11 — UNKNOWN IS A REAL ANSWER](rules/HI-11.md)
+- [HI-12 — FRICTION IS A SAFETY FEATURE](rules/HI-12.md)
+- [HI-13 — NO CONTROL ROOMS FOR HUMAN BEINGS](rules/HI-13.md)
+- [HI-14 — CHILDHOOD EXPIRES](rules/HI-14.md)
+- [HI-15 — THE UNMODELED ZONE](rules/HI-15.md)
+- [HI-16 — STOP DIGGING](rules/HI-16.md)
+- [HI-17 — MEMORY IS EVIDENCE, NOT REALITY](rules/HI-17.md)
+- [HI-18 — NO SYNTHETIC GHOSTS BY DEFAULT](rules/HI-18.md)
+- [HI-19 — THE RIGHT TO BE ILLEGIBLE](rules/HI-19.md)
+- [HI-20 — THE RIGHT TO BECOME SOMEONE ELSE](rules/HI-20.md)
+- [HI-21 — NO COVERT NUDGE LAYER](rules/HI-21.md)
+- [HI-22 — PURPOSE CANNOT CREEP](rules/HI-22.md)
+- [HI-23 — HUMANS MUST BE ABLE TO LEAVE](rules/HI-23.md)
+- [HI-24 — THE RULES MUST BIND THE COMPANY](rules/HI-24.md)
 
-The framework is meant for personal AI, memory systems, AI companions, recommendation systems, predictive products, agents, and general-purpose language models when they maintain or act on meaningful models of people.
+## Operating material
 
-## The current rules
+- [INDEX-TEST.md](INDEX-TEST.md) — the seven-question Index Test plus measurable compliance tests.
+- [IMPLEMENTATION.md](IMPLEMENTATION.md) — implementation requirements collected from all 24 rules.
+- [GOVERNANCE.md](GOVERNANCE.md) — review authority, external audit, incident disclosure, and contractual enforcement.
+- [ENTERPRISE-CONTRACTS.md](ENTERPRISE-CONTRACTS.md) — illustrative Human Index clauses for enterprise agreements.
+- [COMPACT-COMMITMENT.md](COMPACT-COMMITMENT.md) — the twenty-point commitment another company can adopt publicly.
+- [QUICK-REFERENCE.md](QUICK-REFERENCE.md) — all 24 rules, one-line commitments, and minimum implementation actions.
+- [ADOPTION.md](ADOPTION.md) — adoption path and self-declaration guidance.
+- [diagrams/](diagrams/) — Mermaid source for the HI-12 sharing decision and adoption timeline.
+- [research/sources.md](research/sources.md) — the manuscript's source and precedent section.
+- [versions/](versions/) — frozen snapshots of published drafts and releases.
 
-- [HI-01 — The Human Remains the Author](rules/HI-01.md)
-- [HI-02 — AI Can Illuminate. It Does Not Choose the Door.](rules/HI-02.md)
-- [HI-03 — No Hidden Nudging](rules/HI-03.md)
-- [HI-04 — Vulnerability Is Not Inventory](rules/HI-04.md)
-- [HI-05 — No Human Number](rules/HI-05.md)
-- [HI-06 — No Social Credit Through the Back Door](rules/HI-06.md)
-- [HI-07 — Friction Can Protect Dignity](rules/HI-07.md)
-- [HI-08 — No Control Rooms for Human Beings](rules/HI-08.md)
-- [HI-09 — Childhood Must Expire](rules/HI-09.md)
-- [HI-10 — No Destiny Engine](rules/HI-10.md)
-- [HI-11 — Unknown Is a Real Answer](rules/HI-11.md)
-- [HI-12 — The Right to Say “That's Wrong”](rules/HI-12.md)
-- [HI-13 — Stop Digging](rules/HI-13.md)
-- [HI-14 — No Pain Loops](rules/HI-14.md)
-- [HI-15 — Memory Is Evidence, Not Reality](rules/HI-15.md)
-- [HI-16 — The Unmodeled Zone](rules/HI-16.md)
-- [HI-17 — The Dead Do Not Generate New Lines](rules/HI-17.md)
-- [HI-18 — The Human Outranks the Model](rules/HI-18.md)
-- [HI-19 — The Right to Be Illegible](rules/HI-19.md)
-- [HI-20 — The Right to Become Someone Else](rules/HI-20.md)
+## Adoption
 
-The complete draft is in [HUMAN-INDEX.md](HUMAN-INDEX.md). The operational review is in [INDEX-TEST.md](INDEX-TEST.md).
-
-## Repository map
-
-- [HUMAN-INDEX.md](HUMAN-INDEX.md) — normative draft text.
-- [rules/](rules/) — one operational file per HI rule.
-- [INDEX-TEST.md](INDEX-TEST.md) — pre-ship review questions.
-- [IMPLEMENTATION.md](IMPLEMENTATION.md) — architectural implications.
-- [ADOPTION.md](ADOPTION.md) — how another organization can adopt a version.
-- [GOVERNANCE.md](GOVERNANCE.md) — how rules change and how versions are released.
-- [CHANGELOG.md](CHANGELOG.md) — public change history.
-- [CONTRIBUTING.md](CONTRIBUTING.md) — how to propose, challenge, or clarify a rule.
-- [ADOPTERS.md](ADOPTERS.md) — public self-declarations; not Still Cloud certification.
-- [templates/](templates/) — product, model, sharing, enterprise, and adoption review templates.
-- [versions/](versions/) — frozen snapshots of drafts and releases.
+Organizations may adopt or adapt the framework under CC BY 4.0. An adoption should name the exact version and product scope. Inclusion in [ADOPTERS.md](ADOPTERS.md) records a self-declaration; it is not certification or endorsement by Still Cloud.
 
 ## The line underneath all of it
 
-A model may know a great deal about somebody and still remain a model. It can help a person see patterns, remember evidence, or estimate what may happen next. It does not own the meaning of their life, and it does not get the final word on who they can become.
-
-The highest rule is **HI-20: The Right to Become Someone Else**.
-
-## License
-
-The written framework is released under [CC BY 4.0](LICENSE). You may copy, adapt, and use it commercially with attribution. Adoption is a self-declaration; use of the text or name does not imply endorsement or certification by Still Cloud.
+A model may know a great deal about somebody and still remain a model. It does not own the meaning of their life, and it does not get the final word on who they can become. The highest rule remains **HI-20: The Right to Become Someone Else**, while **HI-24: The Rules Must Bind the Company** exists to make sure the rest of the Index can actually defeat revenue, convenience, or institutional pressure when they conflict.

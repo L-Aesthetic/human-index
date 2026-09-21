@@ -1,0 +1,23 @@
+name: Propose a rule
+description: Propose a new Human Index rule for a distinct failure mode.
+title: "[Rule proposal] "
+body:
+  - type: textarea
+    id: failure
+    attributes:
+      label: Failure mode
+      description: What concrete behavior or use is not handled clearly today?
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: Proposed rule text
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples and tradeoffs
+    validations:
+      required: true

@@ -1,0 +1,20 @@
+name: Failure case
+description: Document a real or plausible AI behavior that exposes a gap in the Index.
+title: "[Failure case] "
+body:
+  - type: textarea
+    id: case
+    attributes:
+      label: What happened or could happen?
+    validations:
+      required: true
+  - type: textarea
+    id: affected
+    attributes:
+      label: Who is affected, and how?
+    validations:
+      required: true
+  - type: input
+    id: rules
+    attributes:
+      label: Related HI rules, if any

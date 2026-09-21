@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use or adapt the Human Index, please cite this repository and the version you used."
+title: "The Human Index"
+type: generic
+version: "1.0.0-draft.1"
+date-released: "2026-09-21"
+authors:
+  - family-names: "Lubin"
+    given-names: "Louis"
+    affiliation: "Still Cloud"
+url: "https://www.stillcloud.app/human-index"
+repository-code: "https://github.com/L-Aesthetic/human-index"
+license: "CC-BY-4.0"

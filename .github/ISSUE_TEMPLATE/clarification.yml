@@ -1,0 +1,16 @@
+name: Clarification
+description: Request clearer wording or implementation guidance without changing the commitment.
+title: "[Clarification] "
+body:
+  - type: input
+    id: rule
+    attributes:
+      label: Rule or document
+    validations:
+      required: true
+  - type: textarea
+    id: ambiguity
+    attributes:
+      label: What is unclear?
+    validations:
+      required: true

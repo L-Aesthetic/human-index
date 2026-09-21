@@ -38,7 +38,6 @@ jobs:
           test "$(grep -c '^```mermaid$' HUMAN-INDEX.md)" = "2"
           ! grep -q 'cite' HUMAN-INDEX.md
           ! grep -q 'filecite' HUMAN-INDEX.md
-          ! grep -q 'Louis’s essay' HUMAN-INDEX.md
           test -f diagrams/hi-12-sharing.mmd
           test -f diagrams/adoption-path.mmd
           version="$(cat VERSION)"

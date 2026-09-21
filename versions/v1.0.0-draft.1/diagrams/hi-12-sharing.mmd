@@ -1,0 +1,14 @@
+flowchart TD
+    A[User chooses to share something] --> B{Is the exact object selected?}
+    B -- No --> X[Stop: require specific selection]
+    B -- Yes --> C{Does it include inferred traits or hidden derivatives?}
+    C -- Yes --> D[Separate disclosure and separate consent]
+    C -- No --> E{Is recipient + purpose + duration explicit?}
+    D --> E
+    E -- No --> X
+    E -- Yes --> F[Show recipient-view preview]
+    F --> G{Could disclosure materially affect employment, housing, credit, insurance, education, legal status, or another high-stakes relationship?}
+    G -- Yes --> H[Heightened warning + review + narrow scope]
+    G -- No --> I[Create revocable, logged access grant]
+    H --> I
+    I --> J[Expire automatically unless user deliberately renews]

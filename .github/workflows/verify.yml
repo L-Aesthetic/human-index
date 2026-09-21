@@ -1,0 +1,44 @@
+name: Verify Human Index
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify full manuscript structure
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in HUMAN-INDEX.md INDEX-TEST.md IMPLEMENTATION.md GOVERNANCE.md ENTERPRISE-CONTRACTS.md COMPACT-COMMITMENT.md QUICK-REFERENCE.md ADOPTION.md VERSION; do
+            test -f "$file"
+          done
+          count="$(find rules -maxdepth 1 -type f -name 'HI-*.md' | wc -l | tr -d ' ')"
+          test "$count" = "24"
+          for n in $(seq -w 1 24); do
+            file="rules/HI-$n.md"
+            test -f "$file"
+            grep -q "^# HI-$n — " "$file"
+          done
+          grep -Eq '^1\.0\.0-draft\.[0-9]+$|^[0-9]+\.[0-9]+\.[0-9]+$' VERSION
+          grep -q 'HI-24 // THE RULES MUST BIND THE COMPANY' HUMAN-INDEX.md
+          grep -q 'The Index Test and Compliance Metrics' HUMAN-INDEX.md
+          grep -q 'Governance and Contractual Enforcement' HUMAN-INDEX.md
+          grep -q 'Enterprise contract language' HUMAN-INDEX.md
+          grep -q 'Quick-Reference Cheat Sheet' HUMAN-INDEX.md
+          grep -q 'Adoption Path' HUMAN-INDEX.md
+          grep -q '## Sources' HUMAN-INDEX.md
+          test "$(grep -c '^```mermaid$' HUMAN-INDEX.md)" = "2"
+          ! grep -q 'cite' HUMAN-INDEX.md
+          ! grep -q 'filecite' HUMAN-INDEX.md
+          test -f diagrams/hi-12-sharing.mmd
+          test -f diagrams/adoption-path.mmd
+          version="$(cat VERSION)"
+          test -d "versions/v$version"

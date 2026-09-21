@@ -1,0 +1,21 @@
+name: Challenge a rule
+description: Argue that an existing rule is too broad, too weak, inconsistent, or harmful.
+title: "[Rule challenge] "
+body:
+  - type: input
+    id: rule
+    attributes:
+      label: Rule
+      placeholder: HI-10
+    validations:
+      required: true
+  - type: textarea
+    id: challenge
+    attributes:
+      label: Challenge
+    validations:
+      required: true
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Better alternative
